@@ -4,6 +4,7 @@ metadata:
   name: pushwf  
   labels: 
     name: "pushwf"
+  annotations:
     # force policy will ensure that deployment is updated
     # even when tag is unchanged (latest remains)
     keel.sh/policy: force
@@ -31,3 +32,4 @@ spec:
               port: 8500
             initialDelaySeconds: 10
             timeoutSeconds: 5
+
