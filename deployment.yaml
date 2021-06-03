@@ -5,7 +5,7 @@ metadata:
   labels: 
     name: "pushwf"
   annotations:
-    keel.sh/policy: major
+    keel.sh/policy: all
     keel.sh/trigger: poll      
     keel.sh/pollSchedule: "@every 30s"
 spec:
