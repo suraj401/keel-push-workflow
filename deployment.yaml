@@ -25,11 +25,11 @@ spec:
           imagePullPolicy: Always # this is required to force pull image     
           name: pushwf
           ports:
-            - containerPort: 8500
+            - containerPort: 80
           livenessProbe:
             httpGet:
               path: /
-              port: 8500
+              port: 80
             initialDelaySeconds: 10
             timeoutSeconds: 5
 ---
@@ -42,8 +42,8 @@ spec:
     app: pushwf
   ports:
     - protocol: TCP
-      port: 8500
-      targetPort: 8500
+      port: 80
+      targetPort: 80
 #  clusterIP: 10.0.171.239
   type: LoadBalancer         
 

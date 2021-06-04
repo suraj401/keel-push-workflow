@@ -1,3 +1,6 @@
-FROM nginx:alpine
-WORKDIR /usr/local/alpine/src/github.com/surajneosoft/keel-push-workflow/app
-COPY . /usr/local/alpine/src/github.com/surajneosoft/keel-push-workflow/app
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install nginx -y
+copy . /var/www/html/
+EXPOSE 80
+CMD ["nginx","-g","daemon off;"]
